@@ -1,0 +1,41 @@
+Output:
+INNER_JOIN OUTPUT:-
+emp_id emp_name             dept_id dept_name                                          location                                          
+------ -------------------- ------- -------------------------------------------------- --------------------------------------------------
+     1 Ankur                      5 Mainframe                                          Noida                                             
+     2 NULL                       5 Mainframe                                          Noida                                             
+     4 Vikas                      7 Analytics                                          Pune                                              
+     5 Meera                      8 Cloud                                              Hyderabad                                         
+
+LEFT_JOIN OUTPUT:-
+
+emp_name             dept_name                                         
+-------------------- --------------------------------------------------
+Ankur                Mainframe                                         
+NULL                 Mainframe                                         
+Sneha                NULL                                              
+Vikas                Analytics                                         
+Meera                Cloud                                             
+
+RIGHT_JOIN OUTPUT:-
+
+emp_name             dept_name                                         
+-------------------- --------------------------------------------------
+Ankur                Mainframe                                         
+NULL                 Mainframe                                         
+NULL                 Data Engineering                                  
+Vikas                Analytics                                         
+Meera                Cloud                                             
+NULL                 Support                                           
+
+FULL_OUTER_JOIN:-
+
+emp_name             dept_name                                         
+-------------------- --------------------------------------------------
+Ankur                Mainframe                                         
+NULL                 Mainframe                                         
+Sneha                NULL                                              
+Vikas                Analytics                                         
+Meera                Cloud                                             
+NULL                 Data Engineering                                  
+NULL                 Support         

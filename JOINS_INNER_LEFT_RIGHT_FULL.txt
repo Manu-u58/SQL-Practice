@@ -1,0 +1,63 @@
+-- create
+CREATE TABLE EMPLOYEE (
+  emp_id SMALLINT,
+  emp_name varchar(20),
+  dept_id SMALLINT,
+  salary NUMERIC(8)
+);
+
+CREATE TABLE DEPARTMENT (
+  dept_id int,
+  dept_name VARCHAR(50), 
+  location VARCHAR(50)
+);
+
+CREATE TABLE PROJECT (
+  proj_id int, 
+  proj_name VARCHAR(50),
+  dept_id int
+);
+
+-- insert
+INSERT INTO EMPLOYEE(emp_id, emp_name, dept_id, salary) VALUES 
+(1, 'Ankur', 5, 500000),
+(2, 'NULL', 5, 400000),
+(3, 'Sneha', 6, 600000),
+(4, 'Vikas', 7, 450000),
+(5, 'Meera', 8, 700000);
+INSERT INTO DEPARTMENT(dept_id, dept_name, location) VALUES
+(5, 'Mainframe', 'Noida'),
+(NULL, 'Data Engineering', 'Bangalore'),
+(7, 'Analytics', 'Pune'),
+(8, 'Cloud', 'Hyderabad'),
+(9, 'Support', 'Chennai');
+INSERT INTO PROJECT(proj_id, proj_name, dept_id) VALUES
+(101, 'BOI', 5),
+(102, 'ETL Automation', 6),
+(103, 'Customer Insights', 7),
+(104, 'Azure Migration', 8),
+(105, 'Internal Tools', 9);
+
+-- Question 1: JOIN
+--List all employees with their department name and department location.
+--Inner JOIN
+select a.emp_id,a.emp_name,a.dept_id,d.dept_name,d.location  from EMPLOYEE a
+JOIN DEPARTMENT d ON a.dept_id = d.dept_id
+
+--LEFT JOIN
+SELECT e.emp_name, d.dept_name
+FROM EMPLOYEE e
+LEFT JOIN DEPARTMENT d
+ON e.dept_id = d.dept_id;
+
+--RIGHT JOIN 
+SELECT e.emp_name, d.dept_name
+FROM EMPLOYEE e
+RIGHT JOIN DEPARTMENT d
+ON e.dept_id = d.dept_id;
+
+--FULL OUTER JOIN
+SELECT e.emp_name , d.dept_name
+from EMPLOYEE e 
+FULL OUTER JOIN DEPARTMENT d
+ON e.dept_id = d.dept_id;
