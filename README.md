@@ -4,7 +4,7 @@ This repository contains my **daily SQL practice exercises** as part of my prepa
 Each day includes a set of SQL problems (easy, medium, hard) along with solutions.  
 
 ## 📂 Structure
-- Day01 → Contains Questions and Solutions for that day.
+- Day01 → Contains Questions and Solutions for that day(All types of JOINS <Inner Join , Left Join , Right Join , Full outer Join>.
 - README → Repository overview.
 
 ## 🎯 Goals
